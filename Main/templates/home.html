@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Random Shitty Things</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		    <link href="{% static "css/style.css" %}" rel="stylesheet">
+        <link href="https://cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Poiret+One" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('a[href*=\\#]').on('click', function(e){
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop : $(this.hash).offset().top
+                }, 500);
+            });
+
+            $(window).load(function() {
+                $("div[id]").css("min-height", $(window).height() + "px");
+                $("div[id]").css("padding")
+            })
+        });
+
+        var win = $(window);
+        var allMods = $(".kotak");
+
+        // Already visible modules
+        allMods.each(function(i, el) {
+          var el = $(el);
+          if (el.visible(true)) {
+            el.addClass("already-visible");
+          }
+        });
+
+        win.scroll(function(event) {
+          allMods.each(function(i, el) {
+            var el = $(el);
+            if (el.visible(true)) {
+              el.addClass("come-in");
+            }
+          });
+        });
+        </script>
+    </head>
+
+    <body>
+        <header id="header" class="header-trans">
+            <nav><h1>
+                <span class="col-md-4 left"><a href="#profile">ABOUT ME</a></span>
+                <span class="col-md-4"></span>
+                <span class="col-md-4 right"><a href="#contact">CONTACT</a></span>
+            </h1></nav>
+        </header>
+
+        <div id="top" class="col-md-12 jumbotron">
+            <div class="overlay"></div>
+            <div class="container headline">
+                <div class="col-md-12 left"><strong>
+                        <h1>HELLO!</h1>
+                        <h2>You're about to see an uninteractive website built by me<br>
+                        by me and for me, help me doing my daily activities</h2>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div id="profile" class="col-md-12 profile">
+            <div class="container">
+				<h1>Profile</h1>
+				<hr>
+				<p class="quotes"><i>"Be Free, Be New, Be Different"</i></p>
+				<hr>
+				<div class="col-md-4">
+					<image src="{% static "images/profile.png" %}" alt="cantik" class="myfoto">
+				</div>
+				<div class="col-md-8">
+					<p class="lead" align="left" style="font-size: 17px">
+					<strong>Name</strong>
+					<br>Lulu Ilmaknun Qurotaini<br>
+					<strong>Age</strong>
+					<br>18 years old<br>
+					<strong>Status</strong>
+					<br>Not married<br>
+					<strong>Location</strong>
+					<br>Bogor, Indonesia<br>
+					<br>A creative code destroyer who always energetic, enjoy working in team, and eager to learn new things. Highly interested in technology especially in Data Science, Game Development, Web Development, and Robotics. Able to handle multiple task on a daily basis and quickly adapt to changes in the work environment.</p>
+				</div>
+			  </div>
+        </div>
+
+        <div class="col-md-12 exp">
+            <div class="col-md-3">
+                <div class="kotak" style="height: 40px"></div>
+                <a href="{% url 'home' %}"><div class="kotak black one" style="height: 260px">
+                    <h1>EDUCATION</h1>
+                </div></a>
+                <br>
+                <div class="kotak grey two" style="height: 400px;">ini mungkin nanti gambar project history
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="kotak" style="height: 180px"></div>
+                <a href="{% url 'home' %}"><div class="kotak red one" style="height: 260px">
+                    <h1>EXPERIENCES</h1>
+                </div></a>
+                <br>
+                <div class="kotak black one" style="height: 260px">ini mungkin nanti gambar project history
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="kotak" style="height: 120px"></div>
+                <a href="{% url 'home' %}"><div class="kotak black one" style="height: 260px">
+                    <h1>ACHIVEMENTS</h1>
+                </div></a>
+                <br>
+                <div class="kotak red one" style="height: 320px">ini mungkin nanti gambar project history
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="kotak" style="height: 40px"></div>
+                <a href="{% url 'home' %}"><div class="kotak grey one" style="height: 260px">
+                    <h1>SKILLS</h1>
+                </div></a>
+                <br>
+                <div class="kotak black one" style="height: 400px">ini mungkin nanti gambar project history
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="contact">
+            <div class="container">
+                <h1>CONTACT</h1>
+				<hr>
+                <div class="col-md-2">
+                    <a href="https://www.instagram.com/lialicy"><div class="kotak black" style="height: 120px">
+                        <h4>Instagram</h4>
+                    </div></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.instagram.com/lialicy"><div class="kotak red" style="height: 120px">
+                        <h4>Instagram</h4>
+                    </div></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.instagram.com/lialicy"><div class="kotak grey" style="height: 120px">
+                        <h4>Instagram</h4>
+                    </div></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.instagram.com/lialicy"><div class="kotak black" style="height: 120px">
+                        <h4>Instagram</h4>
+                    </div></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.instagram.com/lialicy"><div class="kotak red" style="height: 120px">
+                        <h4>Instagram</h4>
+                    </div></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.instagram.com/lialicy"><div class="kotak grey" style="height: 120px">
+                        <h4>Instagram</h4>
+                    </div></a>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </body>
+</html>

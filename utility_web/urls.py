@@ -14,8 +14,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.core.exceptions import ImproperlyConfigured
+from django.conf.urls.static import static
+from django.conf import settings
+import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', include('Main.urls') )
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+for app in settings.INSTALLED_APPS:
+    try:
+        if app != 'Main':
+            urlpatterns.append(
+                path('%s/' % app if app!=os.environ.get('ROOT_URL_APP') else '', include('%s.urls' % app))
+            )
+    except ImportError as e:
+        print('Warning! ImportError: %s' % e)
+        print('URLconf from %s will be skipped' % app)
+        print()
