@@ -31,19 +31,12 @@
         var win = $(window);
         var allMods = $(".kotak");
 
-        // Already visible modules
-        allMods.each(function(i, el) {
-          var el = $(el);
-          if (el.visible(true)) {
-            el.addClass("already-visible");
-          }
-        });
-
         win.scroll(function(event) {
           allMods.each(function(i, el) {
             var el = $(el);
-            if (el.visible(true)) {
-              el.addClass("come-in");
+            if (!el.hasClass("visible")) {
+              	el.addClass("come-in");
+            	el.addClass("visible");
             }
           });
         });
@@ -51,13 +44,21 @@
     </head>
 
     <body>
-        <header id="header" class="header-trans">
-            <nav><h1>
-                <span class="col-md-4 left"><a href="#profile">ABOUT ME</a></span>
-                <span class="col-md-4"></span>
-                <span class="col-md-4 right"><a href="#contact">CONTACT</a></span>
-            </h1></nav>
-        </header>
+    	<nav class="navbar navbar-expand-lg fixed-top navbar-default" role="navigation">
+      		<a class="navbar-brand" href="{% url 'home' %}"><h1>TEST</h1></a>
+
+	      	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav" 	aria-label="Toggle navigation">
+        		<span class="navbar-toggler-icon"></span>
+     	   		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+       			<span class="icon-bar"></span>
+     	 	</button>
+
+ 	     	<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    	    	<a class="my-1 my-lg-0 mx-1" href="{% url 'home' %}"><h1>TEST</h1></a>
+    	  	</div>
+    	</nav>
+ 
 
         <div id="top" class="col-md-12 jumbotron">
             <div class="overlay"></div>
