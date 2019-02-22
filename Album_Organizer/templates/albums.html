@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+  {% for album in albums %}
+    {{ album.title }}
+    {{ album.cover.photo }}
+    <img src="{{ album.cover.photo.url }}">
+  {% endfor %}
+{% endblock content %}
