@@ -7,7 +7,7 @@ FREQ = {('Weekly', 'Weekly'),
 
 class Event(models.Model):
     title = models.CharField(max_length=100)
-    dates = models.DateTimeField(auto_now=True)
+    dates = models.DateTimeField()
     freq =  models.CharField(max_length=50, choices=FREQ)
-    file = models.FileField(upload_to="uploads/tasks/files")
+    file = models.FileField(upload_to="uploads/tasks/files", blank=True, null=True)
     desc = models.TextField()
