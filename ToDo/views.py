@@ -19,6 +19,7 @@ def show_event(request):
 
     events = Event.objects.all()
     for event in events:
+        freq = event.freq
         date = int(datetime.datetime.strftime(event.dates, '%d'))
         days[date].append(event)
 
@@ -39,7 +40,7 @@ def make_cal():
     row = 0
     text = "<tr id= " + str(row) + ">"
     for i in range(0, start_day):
-        text += "<td id= " + str(column) + " height='100' " + ">  </td>"
+        text += "<td id= " + str(column) + " height='150' " + ">  </td>"
         column = column + 1
 
     for i in range(1, len(days)):
@@ -47,7 +48,7 @@ def make_cal():
             column = 0
             row = row + 1
             text += "</tr><tr id= " + str(row) + ">"
-        text += "<td id= " + str(column) + " height='100' " + "> " + str(i)
+        text += "<td id= " + str(column) + " height='150' " + "> " + str(i)
         text += "{% if days." + str(i) +  " %}"
         text += "{% for event in days." + str(i) +  " %}<ul>"
         text += "<li>{{ event.title }}</li>"
