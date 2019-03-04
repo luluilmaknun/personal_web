@@ -48,7 +48,10 @@ def make_cal():
             column = 0
             row = row + 1
             text += "</tr><tr id= " + str(row) + ">"
-        text += "<td id= " + str(column) + " height='150' " + "> " + str(i)
+        if i%2 == 0:
+            text += "<td id= " + str(column) + " class='green' height='150' " + "> " + str(i)
+        else:
+            text += "<td id= " + str(column) + " height='150' " + "> " + str(i)
         text += "{% if days." + str(i) +  " %}"
         text += "{% for event in days." + str(i) +  " %}<ul>"
         text += "<li>{{ event.title }}</li>"
