@@ -4,7 +4,6 @@ $(document).ready(function(){
     url: "get_cal/",
     dataType: 'json',
     success: function(response){
-      console.log(response);
       column = 0;
       row = 0;
       text = "<tr id= " + row + ">";
@@ -13,17 +12,18 @@ $(document).ready(function(){
         column++;
 
       }
-      text += "{% for day in days %}"
-      for(i = 1; i < response.length; i++){
+
+      for(i = 1; i < response.length + 1; i++){
         if(column > 6 ){
           column = 0;
           row++;
           text += "</tr><tr id= " + row + ">";
         }
-        text += "<td id= " + column + " height='100' " + "> " + i + " </td>";
+        text += "<td id= " + column + " height='100' " + "> " + i;
+        text+= "</td>";
         column++;
       }
-      text += "{% endfor %}</tr>";
+      text += "</tr>";
       $("tbody").append(text);
     }
   });
