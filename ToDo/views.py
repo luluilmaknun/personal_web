@@ -1,4 +1,5 @@
 from .models import *
+from .forms import *
 from django.shortcuts import render
 from django.http import HttpResponse
 import datetime, calendar
@@ -22,13 +23,15 @@ def show_event(request):
         days[date].append(event)
 
     make_cal()
+    forms = EventForm()
 
-    return render(request, 'calendar.html', {'days' : days})
+    return render(request, 'calendar.html', {'days' : days, 'forms': forms})
 
-def get_cal(request):
-    temp = list(days.keys())
-    json_data = json.dumps(temp)
-    return HttpResponse(json_data, content_type="application/json")
+def add_event(request):
+    form = EventForm(request.POST)
+    if form.is_valid():
+        form.save()
+    return redirect('show_event')
 
 def make_cal():
     f = open("ToDo/templates/calendar_entry.html", "+w")
