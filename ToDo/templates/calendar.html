@@ -26,8 +26,10 @@
         <form method="POST" action="{% url 'add_event' %}">
           {% csrf_token %}
           <div class="form-group center">
-              <label for="status"><strong>{{ form.title.label_tag }}</strong></label>
-              {{ form.title }}
+              <label for="status"><strong>{{ forms.title.label_tag }}</strong></label>
+              {{ forms.title }}
+              <label for="status"><strong>{{ forms.dates.label_tag }}</strong></label>
+              {{ forms.dates }}
           </div>
           <br>
           <button id="submit" type="submit" class="btn btn-primary waves-effect waves-h4ght" value="Save"><h4>Add</h4></button>
