@@ -22,16 +22,5 @@ import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Main.urls') )
-]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-for app in settings.INSTALLED_APPS:
-    try:
-        if app != 'Main':
-            urlpatterns.append(
-                path('%s/' % app if app!=os.environ.get('ROOT_URL_APP') else '', include('%s.urls' % app))
-            )
-    except ImportError as e:
-        print('Warning! ImportError: %s' % e)
-        print('URLconf from %s will be skipped' % app)
-        print()
+    path('', include('new_website.urls'))
+]

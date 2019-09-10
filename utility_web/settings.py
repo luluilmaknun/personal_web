@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'Main',
     'Album_Organizer',
     'My_Blog',
-    'ToDo'
+    'ToDo',
+    'new_website'
 ]
 
 MIDDLEWARE = [
