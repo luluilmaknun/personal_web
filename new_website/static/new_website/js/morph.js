@@ -2,16 +2,16 @@ let config = {
   // shape colors
   shapes: [
     {
-      fill: '#121212',
+      fill: '#646463',
       stroke: ''
     },
     {
       fill: 'transparent',
-      stroke: '#121212'
+      stroke: '#5b5b5c'
     },
     {
       fill: 'transparent',
-      stroke: '#121212'
+      stroke: '#4c4c4b'
     }
   ],
 
