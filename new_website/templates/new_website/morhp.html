@@ -1,0 +1,34 @@
+{% extends 'new_website/base.html' %}
+{% load static %}
+
+{% block script %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+{% endblock %}
+
+{% block style %}
+<link href="{% static 'new_website/css/style.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<section id="jumbotron">
+  <div class="wrapper">
+    <div class="heart-wrap">
+      <svg class="heart" id="heart" viewBox="0 0 1920 3000" xmlns="http://www.w3.org/2000/svg">
+        <path
+          id="heart-path-3"
+          transform="translate(974.58,767.88) rotate(-400) scale(0.001)"></path>
+        <path
+          id="heart-path-2"
+          transform="translate(932.84,695.15) rotate(-400) scale(0.001)"></path>
+        <path
+          id="heart-path-1"
+          transform="translate(888.72,629.18) rotate(-400) scale(0.001)"></path>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/kute.js@1.6.6/kute.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kute.js@1.6.6/kute-svg.js"></script>
+<script src="{% static 'new_website/js/morph.js' %}"></script>
+{% endblock %}
