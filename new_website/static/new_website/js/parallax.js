@@ -5,7 +5,7 @@ $(function() {
         var count = 0;
 
         $('div[class*=parallax__layer__]').each(function() {
-            var x = (parallax_layers - count) / 5;
+            var x = (parallax_layers + count) / 5;
             var transform = 'translateY(-' + ($(window).scrollTop() * count / parallax_layers) + 'px)';
             $(this).css('transform', transform);
 

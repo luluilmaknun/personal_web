@@ -29,36 +29,62 @@
   </div>
   <div class="parallax__layer parallax__layer__5">
     <img src="{% static 'new_website/images/bg5.png' %}" class="object-bottom"/>
+
+    <img src="http://getwallpapers.com/wallpaper/full/2/c/2/1179567-free-download-cat-hd-wallpapers-1080p-1920x1200-for-tablet.jpg" class="image-test"/>
   </div>
   <div class="parallax__layer parallax__layer__6">
     <div class="logo-container">
       <img src="{% static 'new_website/images/lulz_logo.png' %}" class="object-top logo-big" />
       <br>
-      <h1 class="dancing-script text-center text-light">Random Lulz Things</h1>
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="d-flex h-100 justify-content-center align-items-end">
-            <img class="d-block" src="{% static 'new_website/images/me_1.png' %}" alt="First slide">
+          <div class="d-flex h-100 justify-content-end align-items-center flex-column">
+            <h1 class="dancing-script text-center text-light jumbotron-text">Welcome to<br>Random Lulz Things</h1>
+            <br>
+            <img class="d-block" src="{% static 'new_website/images/jumbotron_1.png' %}" alt="First slide">
           </div>
         </div>
         <div class="carousel-item">
-          <div class="d-flex h-100 justify-content-center align-items-end">
-            <img class="d-block" src="{% static 'new_website/images/me_2.png' %}" alt="First slide">
+          <div class="d-flex h-100 justify-content-end align-items-center flex-column">
+            <h1 class="dancing-script text-center text-light jumbotron-text">Awarded Scholars<br>Computer Science Leaders</h1>
+            <h1 class="dancing-script text-center text-light jumbotron-text">2014 - Present</h1>
+            <a href="csleaders.org">csleaders.org</a>
+            <img class="d-block bigger-image" src="{% static 'new_website/images/jumbotron_2.png' %}" alt="First slide">
           </div>
         </div>
         <div class="carousel-item">
-          <div class="d-flex h-100 justify-content-center align-items-end">
-            <img class="d-block" src="{% static 'new_website/images/me_3.png' %}" alt="First slide">
+          <div class="d-flex h-100 justify-content-end align-items-center flex-column">
+            <h1 class="dancing-script text-center text-light jumbotron-text">Senior Member of ITForce<br>FUKI Fasilkom 2019</h1>
+            <h1 class="dancing-script text-center text-light jumbotron-text">2019</h1>
+            <a href="fuki.cs.ui.ac.id">fuki.cs.ui.ac.id</a>
+            <img class="d-block bigger-image" src="{% static 'new_website/images/jumbotron_3.png' %}" alt="First slide">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex h-100 justify-content-center align-items-end flex-row">
+            <div class="h-50">
+              <h1 class="dancing-script text-right text-light jumbotron-text">Teaching Assistant Coordinator<br> of Linear Algebra<br>Faculty of Computer Science,<br>University of Indonesia</h1>
+              <h1 class="dancing-script text-right text-light jumbotron-text">2019</h1>
+            </div>
+            <img class="d-block" src="{% static 'new_website/images/jumbotron_4.png' %}" alt="First slide">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex h-100 justify-content-end align-items-center flex-column">
+            <h1 class="dancing-script text-center text-light jumbotron-text">HRD of Data Science Academu<br>COMPFEST X</h1>
+            <h1 class="dancing-script text-center text-light jumbotron-text">2019</h1>
+            <a href="compfest.id">compfest.id</a>
+            <img class="d-block bigger-image" src="{% static 'new_website/images/jumbotron_5.png' %}" alt="First slide">
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="z-index: 9999999">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="z-index: 9999999">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -69,20 +95,27 @@
 </div>
 
 <div class="content parallax__layer_after p-0">
-  <div id="company-profile" class="container-fluid text-center">
-    <h1 class="text-white"><b>COMPANY PROFILE</b></h1>
-    <h1 class="text-white"><b>FUKI 2019</b></h1>
-    <br>
-    <div class="iframe_resp__container mx-auto">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KxAC0SDY3pk" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-              class="iframe_resp"></iframe>
+  <div class="content-item container-fluid text-center">
+    <div id="profile" class="col-md-12 profile">
+      <div class="container ptp-8">
+        <h1>Profile</h1>
+        <hr>
+        <p class="quotes"><i>"Be Free, Be New, Be Different"</i></p>
+        <hr>
+        <div class="col-md-8">
+          <p class="lead" align="left" style="font-size: 17px">
+          <strong>Name</strong>
+          <br>Lulu Ilmaknun Qurotaini<br>
+          <strong>Age</strong>
+          <br>18 years old<br>
+          <strong>Status</strong>
+          <br>Not married<br>
+          <strong>Location</strong>
+          <br>Bogor, Indonesia<br>
+          <br>A creative code destroyer who always energetic, enjoy working in team, and eager to learn new things. Highly interested in technology especially in Data Science, Game Development, Web Development, and Robotics. Able to handle multiple task on a daily basis and quickly adapt to changes in the work environment.</p>
+        </div>
+      </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <a href="/about"><button class="btn btn-cmn btn-medium bg-yellow text-black py-3"><h6 class="m-0 p-0"><b>Tentang Kami</b></h6>
-    </button></a>
   </div>
 </div>
 {% endblock %}

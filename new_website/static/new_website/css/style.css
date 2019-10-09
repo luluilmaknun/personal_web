@@ -13,6 +13,14 @@ body {
   font-family: 'Dancing Script', cursive;
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
+.ptp-8 {
+  padding-top: 8%;
+}
+
 .navbar {
   background-color: #f0f0f0;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
@@ -129,4 +137,18 @@ img.logo-big {
 
 .carousel-item > div > img {
   height: 65%;
+}
+
+.content-item {
+  height: 100vh;
+  background-color: #DBDBDB;
+}
+
+.image-test {
+  top: 180vh;
+}
+
+.bigger-image {
+  width: 60%;
+  height: auto !important;
 }
