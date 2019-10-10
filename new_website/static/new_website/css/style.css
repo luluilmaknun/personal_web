@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -7,10 +8,16 @@ body {
   margin: 0;
   background: #f2f2f2;
   color: #121212;
+  background: no-repeat center center fixed url(../images/bg_blur.jpg);
+  background-size: cover;
 }
 
 .dancing-script {
   font-family: 'Dancing Script', cursive;
+}
+
+.dosis {
+  font-family: 'Dosis', sans-serif;
 }
 
 .bg-transparent {
@@ -114,6 +121,16 @@ svg {
   padding: 80px;
   position: absolute;
   flex-direction: column;
+  z-index: 999999;
+}
+
+.logo-container a {
+  cursor: pointer;
+}
+
+.logo-container .logo-big {
+  animation: shadow-pulse 1s infinite;
+  cursor: pointer;
 }
 
 img.logo-big {
@@ -144,11 +161,148 @@ img.logo-big {
   background-color: #DBDBDB;
 }
 
-.image-test {
-  top: 180vh;
+.bottom-layer {
+  position: absolute;
+  top: 160vh;
+  width: 100%;
+}
+
+.bottom-layer img {
+  position: absolute;
 }
 
 .bigger-image {
   width: 60%;
   height: auto !important;
+}
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes shadow-pulse-big
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 70px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes shadow-pulse-big-dark
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
+  }
+}
+
+.side-image-profile {
+  width: 100%;
+  border-radius: 50%;
+  margin-top: 100px;
+  margin-left: -50%;
+  box-shadow: 0 0 0 70px rgba(0, 0, 0, 0.05);
+}
+
+p.lead {
+  font-size: 27px;
+}
+
+#values {
+  background-color: #DBDBDB;
+  opacity: 0.5;
+  padding: 1%;
+  width: 100%;
+}
+
+.icon-container a {
+  position: absolute;
+  z-index: 999992;
+  top: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-container a:hover {
+  cursor: pointer;
+}
+
+.icon_1 {
+  width: 150px;
+  transform: translateX(-60px) translateY(40px);
+}
+
+.contact {
+  height: 80px;
+}
+
+.contact img {
+  width: 65px;
+  margin-left: 7px;
+  margin-right: 7px;
+  filter: grayscale(100%);
+}
+
+.contact img:hover {
+  filter: grayscale(0);
+  width: 75px;
+  animation: shadow-pulse 1s infinite;
+}
+
+.button-bottom-container {
+  position: fixed;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+}
+
+.button-bottom {
+  padding: 0.5%;
+  border-radius: 100px;
+  background-color: #DBDBDB;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  max-width: min-content;
+  cursor: pointer;
+  animation: shadow-pulse-big-dark 1s infinite;
+}
+
+.button-bottom img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.button-bottom h1 {
+  max-width: 0;
+  -webkit-transition: max-width 1s;
+  transition: max-width 1s;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 6px;
+}
+
+.button-bottom:hover h1 {
+  max-width: 100%;
+}
+
+.profile {
+  background-color: #DBDBDB;
+  padding-bottom: 3%;
+  margin: 0;
 }

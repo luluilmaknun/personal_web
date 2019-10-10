@@ -11,9 +11,15 @@
 {% endblock %}
 
 {% block content %}
+<div class="button-bottom-container">
+  <button class="button-bottom">
+    <img src="{% static 'new_website/images/lulz_logo.png' %}" />
+    <h1 class="dancing-script">More about me</h1>
+  </button>
+</div>
 <div class="parallax">
   <div class="parallax__layer parallax__layer__0">
-    <img src="{% static 'new_website/images/bg0.png' %}" class="object-top position-fixed h-115"/>
+    <img src="{% static 'new_website/images/bg0.png' %}" class="object-top position-fixed"/>
   </div>
   <div class="parallax__layer parallax__layer__1">
     <img src="{% static 'new_website/images/bg1.png' %}" class="object-bottom"/>
@@ -30,11 +36,28 @@
   <div class="parallax__layer parallax__layer__5">
     <img src="{% static 'new_website/images/bg5.png' %}" class="object-bottom"/>
 
-    <img src="http://getwallpapers.com/wallpaper/full/2/c/2/1179567-free-download-cat-hd-wallpapers-1080p-1920x1200-for-tablet.jpg" class="image-test"/>
+    <div class="bottom-layer">
+      <div class="position-absolute">
+
+      </div>
+<!--      <div class="logo-container" style="top: 300px">-->
+<!--        <a href="#">-->
+<!--          <img src="{% static 'new_website/images/lulz_logo.png' %}" class="object-top logo-big" />-->
+<!--        </a>-->
+<!--        <br>-->
+<!--      </div>-->
+<!--      <div class="icon-container">-->
+<!--        <a href="">-->
+<!--          <img src="{% static 'new_website/images/icon_1.png' %}" class="icon_1"/>-->
+<!--        </a>-->
+<!--      </div>-->
+    </div>
   </div>
   <div class="parallax__layer parallax__layer__6">
     <div class="logo-container">
-      <img src="{% static 'new_website/images/lulz_logo.png' %}" class="object-top logo-big" />
+      <a href="#">
+        <img src="{% static 'new_website/images/lulz_logo.png' %}" class="object-top logo-big" />
+      </a>
       <br>
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -51,7 +74,7 @@
             <h1 class="dancing-script text-center text-light jumbotron-text">Awarded Scholars<br>Computer Science Leaders</h1>
             <h1 class="dancing-script text-center text-light jumbotron-text">2014 - Present</h1>
             <a href="csleaders.org">csleaders.org</a>
-            <img class="d-block bigger-image" src="{% static 'new_website/images/jumbotron_2.png' %}" alt="First slide">
+            <img class="d-none d-md-block bigger-image" src="{% static 'new_website/images/jumbotron_2.png' %}" alt="First slide">
           </div>
         </div>
         <div class="carousel-item">
@@ -59,7 +82,7 @@
             <h1 class="dancing-script text-center text-light jumbotron-text">Senior Member of ITForce<br>FUKI Fasilkom 2019</h1>
             <h1 class="dancing-script text-center text-light jumbotron-text">2019</h1>
             <a href="fuki.cs.ui.ac.id">fuki.cs.ui.ac.id</a>
-            <img class="d-block bigger-image" src="{% static 'new_website/images/jumbotron_3.png' %}" alt="First slide">
+            <img class="d-none d-md-block bigger-image" src="{% static 'new_website/images/jumbotron_3.png' %}" alt="First slide">
           </div>
         </div>
         <div class="carousel-item">
@@ -68,7 +91,7 @@
               <h1 class="dancing-script text-right text-light jumbotron-text">Teaching Assistant Coordinator<br> of Linear Algebra<br>Faculty of Computer Science,<br>University of Indonesia</h1>
               <h1 class="dancing-script text-right text-light jumbotron-text">2019</h1>
             </div>
-            <img class="d-block" src="{% static 'new_website/images/jumbotron_4.png' %}" alt="First slide">
+            <img class="d-none d-md-block" src="{% static 'new_website/images/jumbotron_4.png' %}" alt="First slide">
           </div>
         </div>
         <div class="carousel-item">
@@ -76,7 +99,7 @@
             <h1 class="dancing-script text-center text-light jumbotron-text">HRD of Data Science Academu<br>COMPFEST X</h1>
             <h1 class="dancing-script text-center text-light jumbotron-text">2019</h1>
             <a href="compfest.id">compfest.id</a>
-            <img class="d-block bigger-image" src="{% static 'new_website/images/jumbotron_5.png' %}" alt="First slide">
+            <img class="d-none d-md-block bigger-image" src="{% static 'new_website/images/jumbotron_5.png' %}" alt="First slide">
           </div>
         </div>
       </div>
@@ -95,27 +118,51 @@
 </div>
 
 <div class="content parallax__layer_after p-0">
-  <div class="content-item container-fluid text-center">
-    <div id="profile" class="col-md-12 profile">
-      <div class="container ptp-8">
-        <h1>Profile</h1>
-        <hr>
-        <p class="quotes"><i>"Be Free, Be New, Be Different"</i></p>
-        <hr>
+  <div class="content-item container-fluid text-center p-0">
+    <div id="profile" class="col-md-12 profile row">
+      <div class="col-md-5">
+        <img src="{% static 'new_website/images/profile_image.jpg' %}" class="side-image-profile" />
+      </div>
+      <div class="container my-auto ptp-8 col-md-7 ml-0">
+        <h1 class="dancing-script text-left" style="font-size: 70px">Profile</h1>
+        <p class="quotes text-left" style="font-size: 20px"><i>"Be Free, Be New, Be Different"</i></p>
+        <hr class="w-50 ml-0">
         <div class="col-md-8">
-          <p class="lead" align="left" style="font-size: 17px">
-          <strong>Name</strong>
-          <br>Lulu Ilmaknun Qurotaini<br>
-          <strong>Age</strong>
-          <br>18 years old<br>
-          <strong>Status</strong>
-          <br>Not married<br>
-          <strong>Location</strong>
-          <br>Bogor, Indonesia<br>
-          <br>A creative code destroyer who always energetic, enjoy working in team, and eager to learn new things. Highly interested in technology especially in Data Science, Game Development, Web Development, and Robotics. Able to handle multiple task on a daily basis and quickly adapt to changes in the work environment.</p>
+          <p class="lead dosis" align="left">
+            <span class="font-weight-bold">Name : </span> Lulu Ilmaknun Qurotaini <br>
+            <span class="font-weight-bold">Age : </span> 20 years old <br>
+            <span class="font-weight-bold">Major : </span> Computer Science <br>
+            <span class="font-weight-bold">Location : </span> Bogor, Indonesia <br>
+            <br>A creative code destroyer who always energetic, enjoy working in team, and eager to learn new things. Highly interested in technology especially in Data Science, Game Development, Web Development, and Robotics. Able to handle multiple task on a daily basis and quickly adapt to changes in the work environment.
+            <br><br>Visit my blog: <a href="random-lulz-things.blogspot.com">random-lulz-things.blogspot.com</a></p>
+        </div>
+        <br>
+        <div class="contact justify-content-start d-flex">
+          <a href="mailto:lulu.ilmaknun.q@gmail.com">
+            <img src="{% static 'new_website/images/gmail.png' %}"/>
+          </a>
+          <a href="https://www.linkedin.com/in/lulu-ilmaknun-qurotaini/">
+            <img src="{% static 'new_website/images/linked-in.png' %}"/>
+          </a>
+          <a href="https://www.facebook.com/black.lily26">
+            <img src="{% static 'new_website/images/facebook.png' %}"/>
+          </a>
+          <a href="https://www.instagram.com/lialicy/">
+            <img src="{% static 'new_website/images/instagram.png' %}"/>
+          </a>
+          <a href="https://gitlab.com/luluilmaknun">
+            <img src="{% static 'new_website/images/gitlab.png' %}"/>
+          </a>
         </div>
       </div>
     </div>
+
+<!--    <div id="values" class="d-flex flex-row justify-content-center align-items-center">-->
+<!--      <h1 class="dancing-script">Talkative</h1>-->
+<!--      <h1 class="dancing-script">Open-minded</h1>-->
+<!--      <h1 class="dancing-script">Curious</h1>-->
+<!--      <h1 class="dancing-script">Flexible</h1>-->
+<!--    </div>-->
   </div>
 </div>
 {% endblock %}
