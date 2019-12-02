@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="button-bottom-container">
+<div class="button-bottom-container top-first">
   <button class="button-bottom">
     <img src="{% static 'new_website/images/lulz_logo.png' %}" />
     <h1 class="dancing-script">More about me</h1>
@@ -69,39 +69,39 @@
             <img class="d-block" src="{% static 'new_website/images/jumbotron_1.png' %}" alt="First slide">
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="d-flex h-100 justify-content-end align-items-center flex-column">
-            <h1 class="dancing-script text-center text-light jumbotron-text">Awarded Scholars<br>Computer Science Leaders</h1>
-            <h1 class="dancing-script text-center text-light jumbotron-text">2014 - Present</h1>
-            <a href="csleaders.org">csleaders.org</a>
-            <img class="d-none d-md-block bigger-image" src="{% static 'new_website/images/jumbotron_2.png' %}" alt="First slide">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="d-flex h-100 justify-content-end align-items-center flex-column">
-            <h1 class="dancing-script text-center text-light jumbotron-text">Senior Member of ITForce<br>FUKI Fasilkom 2019</h1>
-            <h1 class="dancing-script text-center text-light jumbotron-text">2019</h1>
-            <a href="fuki.cs.ui.ac.id">fuki.cs.ui.ac.id</a>
-            <img class="d-none d-md-block bigger-image" src="{% static 'new_website/images/jumbotron_3.png' %}" alt="First slide">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="d-flex h-100 justify-content-center align-items-end flex-row">
-            <div class="h-50">
-              <h1 class="dancing-script text-right text-light jumbotron-text">Teaching Assistant Coordinator<br> of Linear Algebra<br>Faculty of Computer Science,<br>University of Indonesia</h1>
-              <h1 class="dancing-script text-right text-light jumbotron-text">2019</h1>
-            </div>
-            <img class="d-none d-md-block" src="{% static 'new_website/images/jumbotron_4.png' %}" alt="First slide">
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="d-flex h-100 justify-content-end align-items-center flex-column">
-            <h1 class="dancing-script text-center text-light jumbotron-text">HRD of Data Science Academu<br>COMPFEST X</h1>
-            <h1 class="dancing-script text-center text-light jumbotron-text">2019</h1>
-            <a href="compfest.id">compfest.id</a>
-            <img class="d-none d-md-block bigger-image" src="{% static 'new_website/images/jumbotron_5.png' %}" alt="First slide">
-          </div>
-        </div>
+<!--        <div class="carousel-item">-->
+<!--          <div class="d-flex h-100 justify-content-end align-items-center flex-column">-->
+<!--            <h1 class="dancing-script text-center text-light jumbotron-text">Awarded Scholars<br>Computer Science Leaders</h1>-->
+<!--            <h1 class="dancing-script text-center text-light jumbotron-text">2014 - Present</h1>-->
+<!--            <a href="csleaders.org">csleaders.org</a>-->
+<!--            <img class="d-none d-md-block bigger-image" src="{% static 'new_website/images/jumbotron_2.png' %}" alt="First slide">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="d-flex h-100 justify-content-end align-items-center flex-column">-->
+<!--            <h1 class="dancing-script text-center text-light jumbotron-text">Senior Member of ITForce<br>FUKI Fasilkom 2019</h1>-->
+<!--            <h1 class="dancing-script text-center text-light jumbotron-text">2019</h1>-->
+<!--            <a href="fuki.cs.ui.ac.id">fuki.cs.ui.ac.id</a>-->
+<!--            <img class="d-none d-md-block bigger-image" src="{% static 'new_website/images/jumbotron_3.png' %}" alt="First slide">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="d-flex h-100 justify-content-center align-items-end flex-row">-->
+<!--            <div class="h-50">-->
+<!--              <h1 class="dancing-script text-right text-light jumbotron-text">Teaching Assistant Coordinator<br> of Linear Algebra<br>Faculty of Computer Science,<br>University of Indonesia</h1>-->
+<!--              <h1 class="dancing-script text-right text-light jumbotron-text">2019</h1>-->
+<!--            </div>-->
+<!--            <img class="d-none d-md-block" src="{% static 'new_website/images/jumbotron_4.png' %}" alt="First slide">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="d-flex h-100 justify-content-end align-items-center flex-column">-->
+<!--            <h1 class="dancing-script text-center text-light jumbotron-text">HRD of Data Science Academu<br>COMPFEST X</h1>-->
+<!--            <h1 class="dancing-script text-center text-light jumbotron-text">2019</h1>-->
+<!--            <a href="compfest.id">compfest.id</a>-->
+<!--            <img class="d-none d-md-block bigger-image" src="{% static 'new_website/images/jumbotron_5.png' %}" alt="First slide">-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="z-index: 9999999">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -113,13 +113,12 @@
       </a>
     </div>
     <img src="{% static 'new_website/images/bg6.png' %}" class="object-bottom"/>
-    <div class="parallax__cover"></div>
   </div>
 </div>
 
-<div class="content parallax__layer_after p-0" style="margin-bottom: 20vh">
+<div class="content parallax__layer_after p-0">
   <div class="content-item container-fluid text-center p-0">
-    <div id="profile" class="col-md-12 profile row">
+    <div id="profile" class="col-md-12 profile row bottom-inset-shadow">
       <div class="col-md-5">
         <img src="{% static 'new_website/images/profile_image.jpg' %}" class="side-image-profile" />
       </div>
@@ -163,6 +162,20 @@
 <!--      <h1 class="dancing-script">Curious</h1>-->
 <!--      <h1 class="dancing-script">Flexible</h1>-->
 <!--    </div>-->
+  </div>
+</div>
+
+<div id="resume" class="curtain">
+  <div class="wrapper curtain__wrapper">
+    <div class="overlay d-md-none"></div>
+    <!-- Sidebar  -->
+    <nav class="curtain__panel sidebar" id="sidebar">
+    </nav>
+
+    <div class="curtain__panel" id="content-side">
+        <hr>
+        <br>
+    </div>
   </div>
 </div>
 {% endblock %}
