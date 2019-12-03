@@ -133,7 +133,7 @@
             <span class="font-weight-bold">Major : </span> Computer Science <br>
             <span class="font-weight-bold">Location : </span> Bogor, Indonesia <br>
             <br>A creative code destroyer who always energetic, enjoy working in team, and eager to learn new things. Highly interested in technology especially in Data Science, Game Development, Web Development, and Robotics. Able to handle multiple task on a daily basis and quickly adapt to changes in the work environment.
-            <br><br>Visit my blog: <a href="random-lulz-things.blogspot.com">random-lulz-things.blogspot.com</a></p>
+            <br><br>Visit my blog: <a href="https://www.random-lulz-things.blogspot.com">random-lulz-things.blogspot.com</a></p>
         </div>
         <br>
         <div class="contact justify-content-start d-flex">
@@ -166,15 +166,71 @@
 </div>
 
 <div id="resume" class="curtain">
+  <div class="overlay d-md-none"></div>
   <div class="wrapper curtain__wrapper">
-    <div class="overlay d-md-none"></div>
     <!-- Sidebar  -->
     <nav class="curtain__panel sidebar" id="sidebar">
+      <img src="{% static 'new_website/images/profile.jpg' %}" class="side-image-profile" />
+
+      <ul class="nav flex-column nav-pills menu_list" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true"><li class="menu_item">Profile</li></a>
+        <a class="nav-link" id="v-pills-achievement-tab" data-toggle="pill" href="#v-pills-achievement" role="tab" aria-controls="v-pills-achievement" aria-selected="false"><li class="menu_item">Achievement</li></a>
+        <a class="nav-link" id="v-pills-experience-tab" data-toggle="pill" href="#v-pills-experience" role="tab" aria-controls="v-pills-experience" aria-selected="false" ><li class="menu_item">Experience</li></a>
+        <a class="nav-link" id="v-pills-training-tab" data-toggle="pill" href="#v-pills-training" role="tab" aria-controls="v-pills-training" aria-selected="false"><li class="menu_item">Training</li></a>
+        <a class="nav-link" id="v-pills-skill-tab" data-toggle="pill" href="#v-pills-skill" role="tab" aria-controls="v-pills-skill" aria-selected="false"><li class="menu_item">Skill</li></a>
+        <a class="nav-link" id="v-pills-hobby-tab" data-toggle="pill" href="#v-pills-hobby" role="tab" aria-controls="v-pills-hobby" aria-selected="false"><li class="menu_item">Hobby</li></a
+      </ul>
+
+      <div class="contact justify-content-start d-flex">
+          <a href="mailto:lulu.ilmaknun.q@gmail.com">
+            <img src="{% static 'new_website/images/gmail.png' %}"/>
+          </a>
+          <a href="https://www.linkedin.com/in/lulu-ilmaknun-qurotaini/">
+            <img src="{% static 'new_website/images/linked-in.png' %}"/>
+          </a>
+          <a href="https://www.facebook.com/black.lily26">
+            <img src="{% static 'new_website/images/facebook.png' %}"/>
+          </a>
+          <a href="https://www.instagram.com/lialicy/">
+            <img src="{% static 'new_website/images/instagram.png' %}"/>
+          </a>
+          <a href="https://gitlab.com/luluilmaknun">
+            <img src="{% static 'new_website/images/gitlab.png' %}"/>
+          </a>
+        </div>
     </nav>
 
     <div class="curtain__panel" id="content-side">
-        <hr>
-        <br>
+        <div class="btn-icon-container position-absolute">
+            <button type="button" id="arrowBack" class="btn btn-icon"><i class="fas fa-arrow-left text-dark fa-2x"></i></button>
+            <button type="button" id="sidebarCollapse" class="btn btn-icon"><i class="fa fa-bars text-white fa-2x" style="font-size: 25px"></i></button>
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <h1 class="dancing-script text-right">Profile</h1>
+                <hr>
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-achievement" role="tabpanel" aria-labelledby="v-pills-achievement-tab">
+                <h1 class="dancing-script text-right">Achievement</h1>
+                <hr>
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-experience" role="tabpanel" aria-labelledby="v-pills-experience-tab">
+                <h1 class="dancing-script text-right">Experience</h1>
+                <hr>
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-skill" role="tabpanel" aria-labelledby="v-pills-skill-tab">
+                <h1 class="dancing-script text-right">Skill</h1>
+                <hr>
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-hobby" role="tabpanel" aria-labelledby="v-pills-hobby-tab">
+                <h1 class="dancing-script text-right">Hobby</h1>
+                <hr>
+            </div>
+        </div>
     </div>
   </div>
 </div>

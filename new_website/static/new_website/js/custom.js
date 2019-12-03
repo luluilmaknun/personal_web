@@ -11,4 +11,22 @@ $(document).ready(function() {
         $('#content-side').css('transform', 'translateX(0)');
         $('body').css('overflow', 'hidden');
     })
+
+    $(document).on('click', '#arrowBack', function(){
+        $('body').css('overflow', 'auto');
+        $('#content-side').css('transform', 'translateX(100%)');
+        $('#sidebar').css('transform', 'translateX(-100%)');
+        $(".button-bottom-container").show(1000);
+        $('.curtain').css('top', 'auto');
+    });
+
+    $('#sidebarCollapse').on('click', function(){
+        $('.overlay').animate({width: "toggle"});
+        $('#sidebar').animate({width: "toggle"});
+    });
+
+    $('.overlay').on('click', function(){
+        $('#sidebar').animate({width: "toggle"});
+        $('.overlay').animate({width: "toggle"});
+    });
 })
