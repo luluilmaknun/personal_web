@@ -24,6 +24,10 @@ body {
   background-color: transparent;
 }
 
+strong {
+  font-weight: bold;
+}
+
 .ptp-8 {
   padding-top: 8%;
 }
@@ -181,6 +185,16 @@ img.logo-big {
   }
   100% {
     box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes shadow-pulse-dark
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
   }
 }
 
@@ -441,6 +455,7 @@ a.article:hover {
     min-height: 100vh;
     background: #DBDBDB;
     transform: translateX(100%);
+    overflow: auto;
 }
 
 .curtain {
@@ -479,7 +494,7 @@ a.article:hover {
 
 a > li.menu_item {
     padding: 1rem 2rem;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
     font-family: 'Dancing Script';
 }
@@ -526,6 +541,80 @@ a.nav-link {
 
 .btn-icon {
     display: inline;
+}
+
+.tab-pane > h1 {
+    font-size: 50px;
+}
+
+#personalities > div {
+    padding: 10px;
+    text-align: center;
+}
+
+.section-icon {
+    width: 50px;
+    display: inline;
+}
+
+ul.timeline_list {
+    position: relative;
+    overflow: hidden;
+}
+
+li.timeline_item {
+  margin-bottom: 30px;
+  color: #222222;
+  line-height: 28px;
+  text-align: left;
+}
+
+li.timeline_item {
+  list-style-type: none;
+  counter-increment: step-counter;
+}
+
+li.timeline_item:before {
+  background-color: #222222;
+  border-radius: 100%;
+  border: 3px solid #222222;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  content: '';
+  text-align: center;
+  margin-left: -30px;
+  margin-top: 10px;
+}
+
+li.timeline_item:hover:before {
+  animation: shadow-pulse-dark 1s infinite;
+}
+
+.line_timeline {
+  position: absolute;
+  height: 10000px;
+  width: 3px;
+  background: #999999;
+  margin-left: -21px;
+  margin-top: 10px;
+  z-index: -1;
+}
+
+.timeline_item .year {
+  font-size: 15px;
+  font-family: 'dancing script';
+  font-weight: bolder;
+}
+
+.timeline_item .title {
+    font-size: 23px;
+    font-family: 'dosis';
+}
+
+.timeline_item .desc {
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
