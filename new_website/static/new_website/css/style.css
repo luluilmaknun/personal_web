@@ -617,6 +617,38 @@ li.timeline_item:hover:before {
     font-size: 16px;
 }
 
+#hobbies {
+    height: 150px;
+    overflow: hidden;
+}
+
+#hobbies .hni-wrapper {
+    padding: 0;
+}
+
+.hni-wrapper .hni {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hni h4 {
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    font-size: 40px;
+    color: white;
+    font-family: 'dancing script';
+    z-index: 1;
+}
+
+.hni img {
+    width: 100%;
+    height: 100%;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+}
+
 @media (max-width: 768px) {
     #sidebar {
         display: none;
