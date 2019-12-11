@@ -156,7 +156,7 @@ img.logo-big {
 }
 
 .carousel-item > div > img {
-  height: 65%;
+  height: 50%;
 }
 
 .content-item {
@@ -487,7 +487,7 @@ a.article:hover {
 }
 
 .menu_list {
-    margin-top: 85px;
+    margin-top: 70px;
     list-style: none;
     padding: 0;
 }
@@ -617,36 +617,91 @@ li.timeline_item:hover:before {
     font-size: 16px;
 }
 
-#hobbies {
+.hobbies {
     height: 150px;
     overflow: hidden;
 }
 
-#hobbies .hni-wrapper {
+.hobbies .hni-wrapper {
     padding: 0;
+    overflow: hidden;
 }
 
 .hni-wrapper .hni {
     position: relative;
     display: flex;
     justify-content: center;
+    height: 100%;
+    align-items: center;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    cursor: default;
 }
 
 .hni h4 {
     text-align: center;
     position: absolute;
-    top: 60px;
-    font-size: 40px;
+    font-size: calc(1rem + 0.5vw) ;
     color: white;
     font-family: 'dancing script';
     z-index: 1;
 }
 
-.hni img {
+.hni .overlay {
     width: 100%;
     height: 100%;
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
+    background: rgb(0,0,0,0.5);
+    display: block;
+}
+
+.hni#cats {
+    background: no-repeat center center url(../images/cats.jpeg);
+    background-size: cover;
+}
+
+.hni#ice_skate {
+    background: no-repeat center center url(../images/ice_skate.jpg);
+    background-size: cover;
+}
+
+.hni#music {
+    background: no-repeat center center url(../images/music.jpg);
+    background-size: cover;
+}
+
+.hni#drawings {
+    background: no-repeat center center url(../images/drawings.jpg);
+    background-size: cover;
+}
+
+.hni#ds {
+    background: no-repeat center center url(../images/ds.jpg);
+    background-size: cover;
+}
+
+.hni#psychiatry {
+    background: no-repeat center center url(../images/psychiatry.jpg);
+    background-size: cover;
+}
+
+.hni#web {
+    background: no-repeat center center url(../images/web.jpg);
+    background-size: cover;
+}
+
+.hni#quran {
+    background: no-repeat center center url(../images/quran.jpg);
+    background-size: cover;
+}
+
+.hni-wrapper:hover .hni {
+    transform: scale(1.5)
+}
+
+.no-bullet {
+    list-style: none;
 }
 
 @media (max-width: 768px) {
