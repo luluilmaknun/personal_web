@@ -29,4 +29,8 @@ $(document).ready(function() {
         $('#sidebar').animate({width: "toggle"});
         $('.overlay').animate({width: "toggle"});
     });
+
+    $('.flip').hover(function(){
+         $(this).find('.card').toggleClass('flipped');
+     });
 })
