@@ -22,6 +22,7 @@ body {
 
 .bg-transparent {
   background-color: transparent;
+  box-shadow: none !important;
 }
 
 strong {
@@ -35,11 +36,13 @@ strong {
 .navbar {
   background-color: #f0f0f0;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-  opacity: 0.8;
+  opacity: 1;
   position: fixed;
-  z-index: 99999;
+  z-index: 1;
   width: 100%;
   display: flex;
+  padding: 1%;
+  min-height: 55px;
 }
 
 .navbar-brand-group {
@@ -47,12 +50,21 @@ strong {
 }
 
 .navbar-brand-logo img {
-  width: 35px;
   border-radius: 50%;
 }
 
 .navbar-brand-group span {
   font-family: 'Dancing Script', cursive;
+}
+
+.nav-logo-container {
+  display: none;
+  position: absolute;
+  top: 13px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: all 1s ease-in;
 }
 
 ul.navbar-menu-list {
@@ -68,13 +80,18 @@ ul.navbar-menu-list a {
 li.navbar-menu-item {
   margin-left: 5px;
   margin-right: 5px;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+}
 
+.text-light li.navbar-menu-item span {
+  color: white;
 }
 
 li.navbar-menu-item span {
-  display: none;
   color: #121212;
+  font-size: 26px;
   white-space: nowrap;
   height: 20px;
   font-family: 'Dancing Script', cursive;
@@ -139,6 +156,12 @@ svg {
 img.logo-big {
   width: 100px !important;
   height: 100px !important;
+  border-radius: 50%;
+}
+
+img.logo-medium {
+  width: 80px !important;
+  height: 80px !important;
   border-radius: 50%;
 }
 
@@ -264,7 +287,7 @@ p.lead {
 }
 
 .contact img {
-  width: 65px;
+  width: 55px;
   margin-left: 7px;
   margin-right: 7px;
   filter: grayscale(100%);
@@ -821,6 +844,35 @@ li.timeline_item:hover:before {
   color: #EEE;
 }
 
+#resume {
+  z-index: 2;
+}
+
+.download-container {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  font-size: 40px;
+}
+
+.download-container button {
+  border-radius: 100%;
+  border: none;
+  width: 70px;
+  height: 70px;
+  background: #121212;
+  color: white;
+  cursor: pointer;
+}
+
+.cv-text {
+  font-size: 10px;
+  padding: 0px;
+  margin: 0px;
+}
+
 @media (max-width: 768px) {
     #sidebar {
         display: none;
@@ -833,5 +885,8 @@ li.timeline_item:hover:before {
     }
     #sidebarCollapse{
         display: inline;
+    }
+    span.navbar-brand, nav .navbar-menu span {
+        display: none;
     }
 }

@@ -17,6 +17,13 @@
     <h1 class="dancing-script">More about me</h1>
   </button>
 </div>
+<div class="download-container">
+  <a target="_blank" href="#">
+    <button alt="click to download cv" id="download_cv"><i class="fas fa-download"></i>
+    </button>
+  </a>
+</div>
+
 <div class="parallax">
   <div class="parallax__layer parallax__layer__0">
     <img src="{% static 'new_website/images/bg0.png' %}" class="object-top position-fixed"/>
@@ -55,9 +62,9 @@
   </div>
   <div class="parallax__layer parallax__layer__6">
     <div class="logo-container">
-      <a href="#">
+      <button onclick="scrollToBottom()" class="bg-transparent border-0">
         <img src="{% static 'new_website/images/lulz_logo.png' %}" class="object-top logo-big" />
-      </a>
+      </button>
       <br>
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -249,6 +256,13 @@
                 <br>
                 <div class="row col-md-12 hobbies">
                     <div class="col-md-3 hni-wrapper">
+                        <div id="quran" class="hni">
+                            <div class="overlay"></div>
+                            <h4>Al-Qur'an</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 hni-wrapper">
                         <div id="cats" class="hni">
                             <div class="overlay"></div>
                             <h4>Cats</h4>
@@ -263,13 +277,6 @@
                     </div>
 
                     <div class="col-md-3 hni-wrapper">
-                        <div id="music" class="hni">
-                            <div class="overlay"></div>
-                            <h4>Music</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 hni-wrapper">
                         <div id="drawings" class="hni">
                             <div class="overlay"></div>
                             <h4>Drawings</h4>
@@ -278,6 +285,13 @@
                 </div>
 
                 <div class="row col-md-12 hobbies">
+                    <div class="col-md-3 hni-wrapper">
+                        <div id="music" class="hni">
+                            <div class="overlay"></div>
+                            <h4>Music</h4>
+                        </div>
+                    </div>
+
                     <div class="col-md-3 hni-wrapper">
                         <div id="ds" class="hni">
                             <div class="overlay"></div>
@@ -299,12 +313,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 hni-wrapper">
-                        <div id="quran" class="hni">
-                            <div class="overlay"></div>
-                            <h4>Al-Qur'an</h4>
-                        </div>
-                    </div>
+
                 </div>
 
             </div>
