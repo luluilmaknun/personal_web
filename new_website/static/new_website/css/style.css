@@ -855,6 +855,8 @@ li.timeline_item:hover:before {
   right: 0;
   margin: 20px;
   font-size: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .download-container button {
